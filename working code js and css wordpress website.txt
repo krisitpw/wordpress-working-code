@@ -1,0 +1,352 @@
+----------------------------------
+Select Option Disable
+-------------------------------
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var selectElement = document.getElementById('form-field-tank_location');
+        var firstOption = selectElement.options[0];
+        firstOption.disabled = true;
+        firstOption.selected = true;
+    });
+// 	   document.addEventListener('DOMContentLoaded', function() {
+//         var selectElement = document.getElementById('form-field-tank_location2');
+//         var firstOption = selectElement.options[0];
+//         firstOption.disabled = true;
+//         firstOption.selected = true;
+//     });
+</script>
+------------------------------------------------------------
+Elementor form checkbox validation (required)
+---------------------------------------------------
+<script>
+// jQuery(document).ready(function($) {
+//     // Replace "your_checkbox_field" with the actual ID or class of your checkbox field
+//     if (!$('#source_of_water').is(':checked')) {
+// //         alert('Please check the checkbox before submitting the form.');
+//         return false; // Prevent form submission
+//     }
+// });
+// // 
+// // document.addEventListener('DOMContentLoaded', function () {
+// //     const form = document.querySelector('.elementor-field-type-checkbox');
+// //     const checkbox = document.querySelector('input[name="source_of_water"]');
+// //     const submitButton = form.querySelector('button[type="submit"]');
+
+// //     form.addEventListener('submit', function (e) {
+// //         if (!checkbox.checked) {
+// //             e.preventDefault();
+// //             alert('Please check the required box.');
+// //             checkbox.focus();
+// //         }
+// //     });
+// // });
+jQuery(document).ready(function($) {
+  // Get the checkbox field
+  var checkboxField = $('.elementor-field-subgroup');
+
+  // Add a required attribute to the checkbox field
+  checkboxField.attr('required', 'required');
+
+  // Add an event listener to the form submission
+  $('form').submit(function(event) {
+    // Check if the checkbox is checked
+    if (!checkboxField.is(':checked')) {
+      // Prevent form submission if the checkbox is not checked
+      event.preventDefault();
+      alert('Please select the source of water');
+    }
+  });
+});
+
+</script>
+---------------------------------------------
+Cart Page Style
+-------------------------------------------
+<style>
+	.qib-button-wrapper button.qib-button {
+    padding: 0px 0px 0px!important;
+    /* height: 41px; */
+    background-color:#EDEDED!important;
+    border: 1px solid #EDEDED;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 20px;
+    width: 41px;
+    color: black;
+    height: 28px!important;
+		border-radius:0px;
+		}
+	
+	
+	.qib-button-wrapper button.qib-button, .qib-button-wrapper div.quantity.wqpmb_quantity{
+		height:28px!important;
+		background-color:#EDEDED!important;
+	}
+	
+	.qib-button-wrapper .quantity input.input-text.qty.text {
+
+		background-color:#EDEDED!important;
+		font-size: 14px;
+	}
+
+</style>
+------------------------------------------
+Product Page Style
+---------------------------------
+<style>
+	th.label{
+		padding: 10px!important;
+		line-height: 0em!important;		
+	}
+	
+	td.woo-variation-items-wrapper{
+		padding: 10px!important;
+	}
+	
+	span.woo-selected-variation-item-name{
+		display:none;
+		color: #000; /* Fallback for older browsers */
+    color: rgba(0, 0, 0, 0.0);
+	}
+	
+	label.select-installation-currently-available-in-delhi-ncr-only{
+		line-height:normal;
+	}
+	
+	a.reset_variations{
+	}     
+	
+	
+	.variable-item.button-variable-item.selected {
+		
+		outline-style: solid!important;
+    outline-width: medium;
+    background-color: #353535!important;
+    color: white!important;
+		
+		
+		
+	}
+	
+	.woo-variation-swatches .wvs-style-squared.variable-items-wrapper .variable-item:not(.radio-variable-item) {
+    border-radius: 25px;
+    padding: 19px;
+}
+	
+	.tbody>tr:nth-child(odd)>th {
+		    background-color: #000;
+	}
+	
+  table tbody>tr:nth-child(odd)>td,table tbody>tr:nth-child(odd)>th {
+    background-color: hsla(0,0%,50.2%,0.0)
+			
+		}		
+	
+	table tbody>tr:nth-child(odd)>td,table tbody>tr:nth-child(odd)>th:hover {
+    background-color: hsla(0,0%,50.2%,0.0)
+			
+		}
+	table tbody>tr:nth-child(odd)>td,table tbody>tr:nth-child(even)>th:hover {
+    background-color: hsla(0,0%,50.2%,0.0)
+			
+		}
+	
+	
+	.woocommerce.bc-uatc-custom-button.bc-uatc-default-shop-style .single_add_to_cart_button:before {
+		font-size: larger!important;
+		    top: 22px!important;
+		left: 21px!important;
+	}
+	
+	
+	
+	.qty-updater {
+		padding: 15px 10px 15px 10px!important;
+		margin-left: 0px!important;
+    background-color: #EDEDED!important;
+    border:0px!important;
+    border-color: #EDEDED!important;
+		color: #7A7A7A!important;
+    font-size: 20px!important;
+	
+	}
+	
+	.input-text.qty.text{
+		
+		background-color:#EDEDED!important;
+		border-style: none!important;
+	}
+	
+	.quantity {
+		background-color:#EDEDED!important;
+	}
+	
+	
+	
+	.woocommerce.quantity.qty {
+    width: 4.631em;
+	}
+	
+	.qib-button-wrapper.qib-button-wrapper-1799{
+		background-color:#EDEDED!important;
+	}
+
+	.qib-button-wrapper button.qib-button{
+		padding: 10px 10px 10px 10px!important;
+		margin-left: 0px!important;
+    background-color: #EDEDED!important;
+    border:0px!important;
+    border-color: #EDEDED!important;
+		color: #7A7A7A!important;
+    font-size: 20px!important;
+		
+	}
+	
+	.qib-button-wrapper{
+		margin:0px!important;
+	}
+
+	
+	
+    </style>
+-----------------------------------------------
+contact us page query type email
+-------------------------------------
+<script>
+				
+        // Get the select and output elements
+        var queryField = document.getElementById('form-field-query_type');
+        var to_field = document.getElementById('form-field-to1233');
+        var cc_field = document.getElementById('form-field-cc1234');
+				var referral_domain_field = document.getElementById('form-field-referral_domain');
+				
+				if (referrerdomain_name !== '') {
+		
+				//alert(referrerdomain_name);
+				referral_domain_field.value= referrerdomain_name;
+				
+ 				 }
+
+     // Add a change event listener to the select field
+        queryField.addEventListener('change', function() {
+            // Update the output field based on the selected value
+            switch (queryField.value) {
+                case 'Want to know more':
+                    to_field.value = 'nakul.goel@hipl.co.in';
+                    cc_field.value = 'kshitij.mehrotra@hipl.co.in';
+                    break;
+                case 'General enquiry':
+                    to_field.value = 'nakul.goel@hipl.co.in';
+                    cc_field.value = 'kshitij.mehrotra@hipl.co.in';
+                    break;    
+                case 'Product purchase query':
+                    to_field.value = 'nakul.goel@hipl.co.in';
+                    cc_field.value = 'kshitij.mehrotra@hipl.co.in';
+                    break;
+                case 'After sales support':
+                    to_field.value = 'tanvika.bhandula@hipl.co.in,richa.gautam@hipl.co.in';
+                    cc_field.value = 'nakul.goel@hipl.co.in,rina.thakur@hipl.co.in,kshitij.mehrotra@hipl.co.i';
+                    break;    
+                case 'Business/Franchise/Distributorship query':
+                    to_field.value = 'nakul.goel@hipl.co.in';
+                    cc_field.value = 'kshitij.mehrotra@hipl.co.in';
+                    break;  
+                default:
+                    to_field.value = 'kshitij.mehrotra@hipl.co.in';
+                    cc_field.value = '';  // Handle default case if needed
+            }
+        });
+    </script>
+----------------------------------------------------
+Add icons in elementor form fields css code
+-----------------------------------
+.elementor-field-group-name::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 14px;
+    width: 16px; 
+    height: 16px; /* Set the desired height of the icon */
+    background-image: url('https://www.flosenso.com/wp-content/uploads/2024/10/user-icon.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.elementor-field-group-email::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 14px;
+    width: 20px; 
+    height: 20px; 
+    background-image: url('https://www.flosenso.com/wp-content/uploads/2024/10/email-icon3.svg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.elementor-field-group-phone::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 14px;
+    width: 16px; 
+    height: 16px; 
+    background-image: url('https://www.flosenso.com/wp-content/uploads/2024/10/call-icon.svg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.elementor-field-group-city::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 14px;
+    width: 16px; 
+    height: 16px; 
+    background-image: url('https://www.flosenso.com/wp-content/uploads/2024/10/city-icon.svg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.elementor-field-group-message::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 14px;
+    width: 16px; 
+    height: 16px; 
+    background-image: url('https://www.flosenso.com/wp-content/uploads/2024/10/msg-icon.svg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/*  input placeholder */
+
+#form-field-name 
+{
+    padding-left: 38px;
+}
+#form-field-email 
+{
+    padding-left: 38px;
+}
+#form-field-phone
+{
+    padding-left: 38px;
+}
+#form-field-city
+{
+    padding-left: 38px;
+}
+#form-field-message
+{
+    padding-left: 38px;
+}
+.elementor-field-group .elementor-select-wrapper select {
+color: #272727ad;
+}
+-------------------------------------------------------------------------
